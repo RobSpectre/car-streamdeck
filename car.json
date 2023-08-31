@@ -1,0 +1,348 @@
+{
+    "streamdeck_ui_version": 1,
+    "state": {
+        "AL14J2C08719": {
+            "buttons": {
+                "0": {
+                    "0": {
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                        "switch_page": 2
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    },
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "1": {
+                    "0": {
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png",
+                        "switch_page": 1
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
+                        "switch_page": 3
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    },
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "2": {
+                    "0": {
+                        "switch_page": 2,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
+                        "switch_page": 4
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    },
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "3": {
+                    "0": {
+                        "switch_page": 3,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "switch_page": 5,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    },
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "4": {
+                    "0": {
+                        "switch_page": 4,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
+                        "switch_page": 6
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "5": {
+                    "0": {
+                        "switch_page": 5,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "switch_page": 7,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {},
+                    "8": {},
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {},
+                    "13": {},
+                    "14": {
+                    }
+                },
+                "6": {
+                    "0": {
+                        "switch_page": 6,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "switch_page": 8,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    },
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "7": {
+                    "0": {
+                        "switch_page": 7,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "switch_page": 9,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    },
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "8": {
+                    "0": {
+                        "switch_page": 8,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {
+                    },
+                    "2": {
+                    },
+                    "3": {
+                    },
+                    "4": {
+                        "switch_page": 10,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                    },
+                    "5": {
+                    },
+                    "6": {
+                    },
+                    "7": {
+                    },
+                    "8": {
+                    },
+                    "9": {
+                    },
+                    "10": {
+                    },
+                    "11": {
+                    },
+                    "12": {
+                    },
+                    "13": {
+                    },
+                    "14": {
+                    }
+                },
+                "9": {
+                    "0": {
+                        "switch_page": 9,
+                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                    },
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                }
+            },
+            "brightness": 84,
+            "page": 0 
+        }
+    }
+}
