@@ -13,8 +13,7 @@
                     "3": {
                     },
                     "4": {
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
                         "switch_page": 2
                     },
                     "5": {
@@ -40,20 +39,32 @@
                 },
                 "1": {
                     "0": {
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png",
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png",
                         "switch_page": 1
                     },
                     "1": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/bullhorn.png",
+                        "text": "Rap Horn",
+                        "command": "play ~/workspace/streamdeck/sounds/airhorn.mp3"
                     },
                     "2": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/robot.png",
+                        "text": "Happy",
+                        "command": "play ~/workspace/streamdeck/sounds/happy_r2d2.mp3"
                     },
                     "3": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/robot.png",
+                        "text": "Sad",
+                        "command": "play ~/workspace/streamdeck/sounds/sad_r2d2.mp3"
                     },
                     "4": {
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
                         "switch_page": 3
                     },
                     "5": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/dog.png",
+                        "text": "Chewy",
+                        "command": "play ~/workspace/streamdeck/sounds/chewy.mp3"
                     },
                     "6": {
                     },
@@ -64,8 +75,14 @@
                     "9": {
                     },
                     "10": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/not-equal.png",
+                        "text": "Wrong",
+                        "command": "play ~/workspace/streamdeck/sounds/wrong.mp3"
                     },
                     "11": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/bugs.png",
+                        "text": "Crickets",
+                        "command": "play ~/workspace/streamdeck/sounds/awkward_crickets.mp3"
                     },
                     "12": {
                     },
@@ -77,7 +94,7 @@
                 "2": {
                     "0": {
                         "switch_page": 2,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {
                     },
@@ -86,7 +103,7 @@
                     "3": {
                     },
                     "4": {
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
                         "switch_page": 4
                     },
                     "5": {
@@ -100,6 +117,9 @@
                     "9": {
                     },
                     "10": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/arrows-rotate.png",
+                        "command": "bash -c \"./execute_command.sh pkill -9 streamdeck && cd ~/workspace/streamdeck && git pull && ~/.virtualenvs/streamdeck/bin/streamdeck\"",
+                        "text:" "Streamdeck"
                     },
                     "11": {
                     },
@@ -113,7 +133,7 @@
                 "3": {
                     "0": {
                         "switch_page": 3,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {
                     },
@@ -123,7 +143,7 @@
                     },
                     "4": {
                         "switch_page": 5,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
                     },
                     "5": {
                     },
@@ -149,7 +169,7 @@
                 "4": {
                     "0": {
                         "switch_page": 4,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {
                     },
@@ -158,7 +178,7 @@
                     "3": {
                     },
                     "4": {
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png",
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
                         "switch_page": 6
                     },
                     "5": {
@@ -184,7 +204,7 @@
                 "5": {
                     "0": {
                         "switch_page": 5,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {
                     },
@@ -194,7 +214,7 @@
                     },
                     "4": {
                         "switch_page": 7,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
                     },
                     "5": {
                     },
@@ -216,7 +236,7 @@
                 "6": {
                     "0": {
                         "switch_page": 6,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {
                     },
@@ -226,7 +246,7 @@
                     },
                     "4": {
                         "switch_page": 8,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
                     },
                     "5": {
                     },
@@ -251,7 +271,7 @@
                 "7": {
                     "0": {
                         "switch_page": 7,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {
                     },
@@ -261,7 +281,7 @@
                     },
                     "4": {
                         "switch_page": 9,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
                     },
                     "5": {
                     },
@@ -287,7 +307,7 @@
                 "8": {
                     "0": {
                         "switch_page": 8,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {
                     },
@@ -297,7 +317,7 @@
                     },
                     "4": {
                         "switch_page": 10,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-right.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
                     },
                     "5": {
                     },
@@ -323,7 +343,7 @@
                 "9": {
                     "0": {
                         "switch_page": 9,
-                        "icon": "/media/rspectre/Storage/workspace/streamdeck/images/fontawesome/angle-left.png"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
                     },
                     "1": {},
                     "2": {},
