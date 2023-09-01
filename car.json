@@ -256,7 +256,7 @@
 							"14": {}
 						}
 					},
-					"brightness": 84,
+					"brightness": "84",
 					"page": 0
 				}
 			}
