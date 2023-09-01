@@ -119,7 +119,7 @@
                     "10": {
                         "icon": "~/workspace/streamdeck/images/fontawesome/arrows-rotate.png",
                         "command": "bash -c \"./execute_command.sh pkill -9 streamdeck && cd ~/workspace/streamdeck && git pull && ~/.virtualenvs/streamdeck/bin/streamdeck\"",
-                        "text:" "Streamdeck"
+                        "text": "Streamdeck"
                     },
                     "11": {
                     },
