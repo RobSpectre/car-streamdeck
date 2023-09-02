@@ -43,7 +43,10 @@ def send(to, sender, agency):
         contents.append(f"Found a {agency} unit, but could not find location.")
         contents.append("I'll respond later with where this occured.")
 
-    yag.send(to=to, subject=subject, contents=contents)
+    yag.send(to=to,
+             subject=subject,
+             contents=contents,
+             attachments='/var/www/html/DetectData.txt')
 
     click.echo("Done.")
 
