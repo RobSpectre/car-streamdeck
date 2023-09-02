@@ -13,15 +13,42 @@
 						"switch_page": 2
 					},
 					"5": {},
-					"6": {},
-					"7": {},
-					"8": {},
-					"9": {},
-					"10": {},
-					"11": {},
-					"12": {},
+					"6": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-up.png",
+						"keys": "up"
+					},
+					"7": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/shield-dog.png",
+                        "text": "State",
+                        "command": "~/.virtualenvs/streamdeck/bin/python ~/workspace/streamdeck/send_sherlock_report.py send --to rob.spectre@gmail.com --sender rob@brooklynhacker.com --agency State"
+                    },
+					"8": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/star.png",
+                        "text": "Sheriff",
+                        "command": "~/.virtualenvs/streamdeck/bin/python ~/workspace/streamdeck/send_sherlock_report.py send --to rob.spectre@gmail.com --sender rob@brooklynhacker.com --agency Sheriff"
+                    },
+					"9": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/shield.png",
+                        "text": "PD",
+                        "command": "~/.virtualenvs/streamdeck/bin/python ~/workspace/streamdeck/send_sherlock_report.py send --to rob.spectre@gmail.com --sender rob@brooklynhacker.com --agency PD"
+                    },
+					"10": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-left.png",
+						"keys": "left"
+					},
+					"11": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-down.png",
+						"keys": "down"
+					},
+					"12": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-right.png",
+						"keys": "right"
+					},
 					"13": {},
-					"14": {}
+					"14": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/rectangle-x-mark.png",
+						"keys": "enter"
+					}
 				},
 				"1": {
 					"0": {
@@ -50,12 +77,28 @@
 					"5": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/dog.png",
 						"text": "Chewy",
-						"command": "play ~/workspace/streamdeck/sounds/chewy.mp3"
+						"command": "play ~/workspace/streamdeck/sounds/chewy.wav"
 					},
-					"6": {},
-					"7": {},
-					"8": {},
-					"9": {},
+					"6": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/ranking-star.png",
+						"text": "Fanfare",
+						"command": "play ~/workspace/streamdeck/sounds/mario_win.mp3"
+					},
+					"7": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/thumbs-down.png",
+						"text": "Boo",
+						"command": "play ~/workspace/streamdeck/sounds/booing.wav"
+					},
+					"8": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/burst.png",
+						"text": "Rick Roll",
+						"command": "play ~/workspace/streamdeck/sounds/rick_roll.wav"
+					},
+					"9": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/cloud-with-a-chance-of-meatball.png",
+						"text": "Yakety",
+						"command": "play ~/workspace/streamdeck/sounds/yakety_sax.wav"
+					},
 					"10": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/not-equal.png",
 						"text": "Wrong",
@@ -66,9 +109,21 @@
 						"text": "Crickets",
 						"command": "play ~/workspace/streamdeck/sounds/awkward_crickets.mp3"
 					},
-					"12": {},
-					"13": {},
-					"14": {}
+					"12": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/tractor.png",
+						"text": "Move",
+						"command": "play ~/workspace/streamdeck/sounds/move.mp3"
+					},
+					"13": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/face-sad-cry.png",
+						"text": "Noooo",
+						"command": "play ~/workspace/streamdeck/sounds/nooooo.mp3"
+					},
+					"14": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/spaghetti-monster-flying.png",
+						"text": "UFO",
+						"command": "play ~/workspace/streamdeck/sounds/x_files_theme_cut.mp3"
+					}
 				},
 				"2": {
 					"0": {

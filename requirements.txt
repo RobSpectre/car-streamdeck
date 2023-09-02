@@ -1,1 +1,6 @@
 streamdeck-linux-gui==3.0.1
+yagmail==0.15.293
+click==8.1.7
+gpsd-py3==0.3.0
+geopy==2.4.0
+keyring==24.2.0
