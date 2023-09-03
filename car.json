@@ -15,7 +15,7 @@
 					"5": {
                         "icon": "~/workspace/streamdeck/images/fontawesome/shield.png",
                         "text": "Unmarked",
-                        "command": "~/.virtualenvs/streamdeck/bin/python ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Unmarked"
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Unmarked"
                     },
 					"6": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-up.png",
@@ -24,17 +24,17 @@
 					"7": {
                         "icon": "~/workspace/streamdeck/images/fontawesome/shield-dog.png",
                         "text": "State",
-                        "command": "~/.virtualenvs/streamdeck/bin/python ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency State"
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency State"
                     },
 					"8": {
                         "icon": "~/workspace/streamdeck/images/fontawesome/star.png",
                         "text": "Sheriff",
-                        "command": "~/.virtualenvs/streamdeck/bin/python ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Sheriff"
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Sheriff"
                     },
 					"9": {
                         "icon": "~/workspace/streamdeck/images/fontawesome/shield.png",
                         "text": "PD",
-                        "command": "~/.virtualenvs/streamdeck/bin/python ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 ~/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
                     },
 					"10": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-left.png",
