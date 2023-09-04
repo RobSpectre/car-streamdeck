@@ -4,37 +4,53 @@
 		"AL14J2C08719": {
 			"buttons": {
 				"0": {
-					"0": {},
-					"1": {},
-					"2": {},
-					"3": {},
+					"0": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/user-secret.png",
+                        "text": "Unmarked",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Unmarked"
+                    },
+					"1": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/shield-dog.png",
+                        "text": "State",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency State"
+                    },
+					"2": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/star.png",
+                        "text": "Sheriff",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Sheriff"
+                    },
+					"3": {
+                        "icon": "~/workspace/streamdeck/images/fontawesome/shield.png",
+                        "text": "PD",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
+                    },
 					"4": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
 						"switch_page": 2
 					},
 					"5": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/shield.png",
-                        "text": "Unmarked",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Unmarked"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/not-equal.png",
+                        "text": "False +",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalsePositive"
                     },
 					"6": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-up.png",
 						"keys": "up"
 					},
 					"7": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/shield-dog.png",
-                        "text": "State",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency State"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/car-tunnel.png",
+                        "text": "Transit LE",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency TransitLE"
                     },
 					"8": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/star.png",
-                        "text": "Sheriff",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Sheriff"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/car-tunnel.png",
+                        "text": "False +",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalsePositive"
                     },
 					"9": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/shield.png",
-                        "text": "PD",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/car-tunnel.png",
+                        "text": "EMS",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency EMS"
                     },
 					"10": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-left.png",
@@ -134,9 +150,18 @@
 						"switch_page": 2,
 						"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
 					},
-					"1": {},
-					"2": {},
-					"3": {},
+					"1": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/volume-low.png",
+						"keys": "media_volume_down"
+                    },
+					"2": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/volume-high.png",
+						"keys": "media_volume_up"
+                    },
+					"3": {
+						"icon": "~/workspace/streamdeck/images/fontawesome/volume-off.png",
+						"keys": "media_volume_mute"
+                    },
 					"4": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
 						"switch_page": 4
