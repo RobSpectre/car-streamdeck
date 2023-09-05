@@ -43,9 +43,9 @@
                         "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency TransitLE"
                     },
 					"8": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/car-tunnel.png",
-                        "text": "False +",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalsePositive"
+                        "icon": "~/workspace/streamdeck/images/fontawesome/ghost.png",
+                        "text": "False -",
+                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalseNegative"
                     },
 					"9": {
                         "icon": "~/workspace/streamdeck/images/fontawesome/car-tunnel.png",
