@@ -78,17 +78,17 @@
 					"1": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/bullhorn.png",
 						"text": "Rap Horn",
-						"command": "play ~/workspace/streamdeck/sounds/airhorn.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/airhorn.mp3"
 					},
 					"2": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/robot.png",
 						"text": "Happy",
-						"command": "play ~/workspace/streamdeck/sounds/happy_r2d2.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/happy_r2d2.mp3"
 					},
 					"3": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/robot.png",
 						"text": "Sad",
-						"command": "play ~/workspace/streamdeck/sounds/sad_r2d2.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/sad_r2d2.mp3"
 					},
 					"4": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
@@ -97,52 +97,52 @@
 					"5": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/dog.png",
 						"text": "Chewy",
-						"command": "play ~/workspace/streamdeck/sounds/chewy.wav"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/chewy.wav"
 					},
 					"6": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/ranking-star.png",
 						"text": "Fanfare",
-						"command": "play ~/workspace/streamdeck/sounds/mario_win.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/mario_win.mp3"
 					},
 					"7": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/thumbs-down.png",
 						"text": "Boo",
-						"command": "play ~/workspace/streamdeck/sounds/booing.wav"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/booing.wav"
 					},
 					"8": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/burst.png",
 						"text": "Rick Roll",
-						"command": "play ~/workspace/streamdeck/sounds/rick_roll.wav"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/rick_roll.wav"
 					},
 					"9": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/cloud-with-a-chance-of-meatball.png",
 						"text": "Yakety",
-						"command": "play ~/workspace/streamdeck/sounds/yakety_sax.wav"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/yakety_sax.wav"
 					},
 					"10": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/not-equal.png",
 						"text": "Wrong",
-						"command": "play ~/workspace/streamdeck/sounds/wrong.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/wrong.mp3"
 					},
 					"11": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/bugs.png",
 						"text": "Crickets",
-						"command": "play ~/workspace/streamdeck/sounds/awkward_crickets.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/awkward_crickets.mp3"
 					},
 					"12": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/tractor.png",
 						"text": "Move",
-						"command": "play ~/workspace/streamdeck/sounds/move.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/move.mp3"
 					},
 					"13": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/face-sad-cry.png",
 						"text": "Noooo",
-						"command": "play ~/workspace/streamdeck/sounds/nooooo.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/nooooo.mp3"
 					},
 					"14": {
 						"icon": "~/workspace/streamdeck/images/fontawesome/spaghetti-monster-flying.png",
 						"text": "UFO",
-						"command": "play ~/workspace/streamdeck/sounds/x_files_theme_cut.mp3"
+						"command": "AUDIODEV=hw:1 ~/workspace/streamdeck/sounds/x_files_theme_cut.mp3"
 					}
 				},
 				"2": {
