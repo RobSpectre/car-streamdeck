@@ -57,12 +57,12 @@ case $(sound_util) in
 esac
 
 success() {
-    ( AUDIODEV=hw:1 play /home/sherlock/workspace/streamdeck/sounds/zelda_Fanfare.wav > /dev/null 2>&1 & disown)
+    ( play sounds/zelda_Fanfare.wav > /dev/null 2>&1 & disown)
     return 0
 }
 failure() {
     local rc=$?
-    ( AUDIODEV=hw:1 play /home/sherlock/workspace/streamdeck/sounds/zelda_Bomb_Drop.wav > /dev/null 2>&1 & disown)
+    ( play sounds/zelda_Bomb_Drop.wav > /dev/null 2>&1 & disown)
     return $rc
 }
 # eval is used here to allow for alias resolution

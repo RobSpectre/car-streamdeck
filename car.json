@@ -5,165 +5,165 @@
 			"buttons": {
 				"0": {
 					"0": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/user-secret.png",
+                        "icon": "images/fontawesome/user-secret.png",
                         "text": "Unmarked",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Unmarked"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Unmarked"
                     },
 					"1": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/shield-dog.png",
+                        "icon": "images/fontawesome/shield-dog.png",
                         "text": "State",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency State"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency State"
                     },
 					"2": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/star.png",
+                        "icon": "images/fontawesome/star.png",
                         "text": "Sheriff",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Sheriff"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Sheriff"
                     },
 					"3": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/shield.png",
+                        "icon": "images/fontawesome/shield.png",
                         "text": "PD",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
                     },
 					"4": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
+						"icon": "images/fontawesome/angle-right.png",
 						"switch_page": 2
 					},
 					"5": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/not-equal.png",
+                        "icon": "images/fontawesome/not-equal.png",
                         "text": "False +",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalsePositive"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalsePositive"
                     },
 					"6": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-up.png",
+						"icon": "images/fontawesome/arrow-up.png",
 						"keys": "up"
 					},
 					"7": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/car-tunnel.png",
+                        "icon": "images/fontawesome/car-tunnel.png",
                         "text": "Transit LE",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency TransitLE"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency TransitLE"
                     },
 					"8": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/ghost.png",
+                        "icon": "images/fontawesome/ghost.png",
                         "text": "False -",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalseNegative"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalseNegative"
                     },
 					"9": {
-                        "icon": "~/workspace/streamdeck/images/fontawesome/car-tunnel.png",
+                        "icon": "images/fontawesome/car-tunnel.png",
                         "text": "EMS",
-                        "command": "/home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency EMS"
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency EMS"
                     },
 					"10": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-left.png",
+						"icon": "images/fontawesome/arrow-left.png",
 						"keys": "left"
 					},
 					"11": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-down.png",
+						"icon": "images/fontawesome/arrow-down.png",
 						"keys": "down"
 					},
 					"12": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/arrow-right.png",
+						"icon": "images/fontawesome/arrow-right.png",
 						"keys": "right"
 					},
 					"13": {},
 					"14": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/rectangle-x-mark.png",
+						"icon": "images/fontawesome/rectangle-x-mark.png",
 						"keys": "enter"
 					}
 				},
 				"1": {
 					"0": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png",
+						"icon": "images/fontawesome/angle-left.png",
 						"switch_page": 1
 					},
 					"1": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/bullhorn.png",
+						"icon": "images/fontawesome/bullhorn.png",
 						"text": "Rap Horn",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/airhorn.wav"
+						"command": "paplay --device=1 sounds/airhorn.wav"
 					},
 					"2": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/robot.png",
+						"icon": "images/fontawesome/robot.png",
 						"text": "Happy",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/happy_r2d2.wav"
+						"command": "paplay --device=1 sounds/happy_r2d2.wav"
 					},
 					"3": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/robot.png",
+						"icon": "images/fontawesome/robot.png",
 						"text": "Sad",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/sad_r2d2.wav"
+						"command": "paplay --device=1 sounds/sad_r2d2.wav"
 					},
 					"4": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
+						"icon": "images/fontawesome/angle-right.png",
 						"switch_page": 3
 					},
 					"5": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/dog.png",
+						"icon": "images/fontawesome/dog.png",
 						"text": "Chewy",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/chewy.wav"
+						"command": "paplay --device=1 sounds/chewy.wav"
 					},
 					"6": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/ranking-star.png",
+						"icon": "images/fontawesome/ranking-star.png",
 						"text": "Fanfare",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/mario_win.wav"
+						"command": "paplay --device=1 sounds/mario_win.wav"
 					},
 					"7": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/thumbs-down.png",
+						"icon": "images/fontawesome/thumbs-down.png",
 						"text": "Boo",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/booing.wav"
+						"command": "paplay --device=1 sounds/booing.wav"
 					},
 					"8": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/burst.png",
+						"icon": "images/fontawesome/burst.png",
 						"text": "Rick Roll",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/rick_roll.wav"
+						"command": "paplay --device=1 sounds/rick_roll.wav"
 					},
 					"9": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/cloud-with-a-chance-of-meatball.png",
+						"icon": "images/fontawesome/cloud-with-a-chance-of-meatball.png",
 						"text": "Yakety",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/yakety_sax.wav"
+						"command": "paplay --device=1 sounds/yakety_sax.wav"
 					},
 					"10": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/not-equal.png",
+						"icon": "images/fontawesome/not-equal.png",
 						"text": "Wrong",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/wrong.wav"
+						"command": "paplay --device=1 sounds/wrong.wav"
 					},
 					"11": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/bugs.png",
+						"icon": "images/fontawesome/bugs.png",
 						"text": "Crickets",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/awkward_crickets.wav"
+						"command": "paplay --device=1 sounds/awkward_crickets.wav"
 					},
 					"12": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/tractor.png",
+						"icon": "images/fontawesome/tractor.png",
 						"text": "Move",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/move.wav"
+						"command": "paplay --device=1 sounds/move.wav"
 					},
 					"13": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/face-sad-cry.png",
+						"icon": "images/fontawesome/face-sad-cry.png",
 						"text": "Noooo",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/nooooo.wav"
+						"command": "paplay --device=1 sounds/nooooo.wav"
 					},
 					"14": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/spaghetti-monster-flying.png",
+						"icon": "images/fontawesome/spaghetti-monster-flying.png",
 						"text": "UFO",
-						"command": "paplay --device=1 ~/workspace/streamdeck/sounds/x_files_theme_cut.wav"
+						"command": "paplay --device=1 sounds/x_files_theme_cut.wav"
 					}
 				},
 				"2": {
 					"0": {
 						"switch_page": 2,
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+						"icon": "images/fontawesome/angle-left.png"
 					},
 					"1": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/volume-low.png",
+						"icon": "images/fontawesome/volume-low.png",
 						"keys": "media_volume_down"
                     },
 					"2": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/volume-high.png",
+						"icon": "images/fontawesome/volume-high.png",
 						"keys": "media_volume_up"
                     },
 					"3": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/volume-off.png",
+						"icon": "images/fontawesome/volume-off.png",
 						"keys": "media_volume_mute"
                     },
 					"4": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
+						"icon": "images/fontawesome/angle-right.png",
 						"switch_page": 4
 					},
 					"5": {},
@@ -172,8 +172,8 @@
 					"8": {},
 					"9": {},
 					"10": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/arrows-rotate.png",
-						"command": "bash -c \"./execute_command.sh pkill -9 streamdeck && cd ~/workspace/streamdeck && git pull && ~/.virtualenvs/streamdeck/bin/streamdeck\"",
+						"icon": "images/fontawesome/arrows-rotate.png",
+						"command": "bash -c \"./execute_command.sh pkill -9 streamdeck && git pull && ~/.virtualenvs/streamdeck/bin/streamdeck\"",
 						"text": "Streamdeck"
 					},
 					"11": {},
@@ -184,14 +184,14 @@
 				"3": {
 					"0": {
 						"switch_page": 3,
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+						"icon": "images/fontawesome/angle-left.png"
 					},
 					"1": {},
 					"2": {},
 					"3": {},
 					"4": {
 						"switch_page": 5,
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
+						"icon": "images/fontawesome/angle-right.png"
 					},
 					"5": {},
 					"6": {},
@@ -207,13 +207,13 @@
 				"4": {
 					"0": {
 						"switch_page": 4,
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+						"icon": "images/fontawesome/angle-left.png"
 					},
 					"1": {},
 					"2": {},
 					"3": {},
 					"4": {
-						"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png",
+						"icon": "images/fontawesome/angle-right.png",
 						"switch_page": 6
 					},
 					"5": {},
@@ -230,14 +230,14 @@
 					"5": {
 						"0": {
 							"switch_page": 5,
-							"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+							"icon": "images/fontawesome/angle-left.png"
 						},
 						"1": {},
 						"2": {},
 						"3": {},
 						"4": {
 							"switch_page": 7,
-							"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
+							"icon": "images/fontawesome/angle-right.png"
 						},
 						"5": {},
 						"6": {},
@@ -253,14 +253,14 @@
 					"6": {
 						"0": {
 							"switch_page": 6,
-							"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+							"icon": "images/fontawesome/angle-left.png"
 						},
 						"1": {},
 						"2": {},
 						"3": {},
 						"4": {
 							"switch_page": 8,
-							"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
+							"icon": "images/fontawesome/angle-right.png"
 						},
 						"5": {},
 						"6": {},
@@ -276,14 +276,14 @@
 						"7": {
 							"0": {
 								"switch_page": 7,
-								"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+								"icon": "images/fontawesome/angle-left.png"
 							},
 							"1": {},
 							"2": {},
 							"3": {},
 							"4": {
 								"switch_page": 9,
-								"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
+								"icon": "images/fontawesome/angle-right.png"
 							},
 							"5": {},
 							"6": {},
@@ -299,14 +299,14 @@
 						"8": {
 							"0": {
 								"switch_page": 8,
-								"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+								"icon": "images/fontawesome/angle-left.png"
 							},
 							"1": {},
 							"2": {},
 							"3": {},
 							"4": {
 								"switch_page": 10,
-								"icon": "~/workspace/streamdeck/images/fontawesome/angle-right.png"
+								"icon": "images/fontawesome/angle-right.png"
 							},
 							"5": {},
 							"6": {},
@@ -322,7 +322,7 @@
 						"9": {
 							"0": {
 								"switch_page": 9,
-								"icon": "~/workspace/streamdeck/images/fontawesome/angle-left.png"
+								"icon": "images/fontawesome/angle-left.png"
 							},
 							"1": {},
 							"2": {},
