@@ -8,7 +8,9 @@ from collections import deque
 import click
 import gpsd
 import yagmail
+
 from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
 
 labels = {
     'PD': {
@@ -115,9 +117,13 @@ def send(to, sender, agency):
     else:
         contents.append("<pre>No data associated with this timestamp.</pre>")
 
-    yag.send(to=to,
-             subject=subject,
-             contents=contents)
+
+    try:
+        yag.send(to=to,
+                 subject=subject,
+                 contents=contents)
+    except Exception as e:
+        click.echo(f"Error sending email: {e}")
 
     click.echo("Done.")
 
@@ -133,15 +139,15 @@ def get_location():
 
     if address:
         return {
-            lat: current.lat,
-            lon: current.lon,
-            speed: current.speed(),
-            altitude: current.alt,
-            city: location.raw['address'].get('city', None),
-            county: location.raw['address'].get('county', None),
-            state: location.raw['address'].get('county', None),
-            time: now_string,
-            map_url: current.map_url
+            'lat': current.lat,
+            'lon': current.lon,
+            'speed': current.speed(),
+            'altitude': current.alt,
+            'city': location.raw['address'].get('city', None),
+            'county': location.raw['address'].get('county', None),
+            'state': location.raw['address'].get('county', None),
+            'time': now_string,
+            'map_url': current.map_url
         }
     else:
         return None
@@ -171,9 +177,11 @@ def get_address(current):
     address = None
 
     try:
-        geolocator = Nominatim(user_agent="Sherlock")
-        address = geolocator.reverse("{0}, {1}".format(current.lat,
-                                                       current.lon))
+        geolocator = Photon(user_agent="Sherlock")
+        reverse = RateLimiter(geolocator.reverse, min_delay_seconds=1)
+        address = reverse("{0}, {1}".format(current.lat,
+                                            current.lon),
+                          exactly_one=True)
     except Exception as e:
         click.echo("Could not reverse address: {0}".format(e))
 
