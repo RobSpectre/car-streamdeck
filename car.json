@@ -29,7 +29,7 @@
 						"switch_page": 2
 					},
 					"5": {
-                        "icon": "images/fontawesome/not-equal.png",
+                        "icon": "images/fontawesome/circle-x-mark.png",
                         "text": "False +",
                         "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalsePositive"
                     },
@@ -39,8 +39,8 @@
 					},
 					"7": {
                         "icon": "images/fontawesome/car-tunnel.png",
-                        "text": "Transit LE",
-                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency TransitLE"
+                        "text": "Other LE",
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency OtherLE"
                     },
 					"8": {
                         "icon": "images/fontawesome/ghost.png",
@@ -48,7 +48,7 @@
                         "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency FalseNegative"
                     },
 					"9": {
-                        "icon": "images/fontawesome/car-tunnel.png",
+                        "icon": "images/fontawesome/truck.png",
                         "text": "EMS",
                         "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency EMS"
                     },
@@ -64,7 +64,11 @@
 						"icon": "images/fontawesome/arrow-right.png",
 						"keys": "right"
 					},
-					"13": {},
+					"13": {
+                        "icon": "images/fontawesome/unlock.png",
+                        "write": "sherlock\n",
+                        "text": "Unlock"
+                    },
 					"14": {
 						"icon": "images/fontawesome/rectangle-x-mark.png",
 						"keys": "enter"
@@ -125,9 +129,9 @@
 						"command": "paplay --device=1 sounds/wrong.wav"
 					},
 					"11": {
-						"icon": "images/fontawesome/bugs.png",
-						"text": "Crickets",
-						"command": "paplay --device=1 sounds/awkward_crickets.wav"
+						"icon": "images/fontawesome/beer-mug-empty.png",
+						"text": "Cantina",
+						"command": "paplay --device=1 sounds/cantina.wav"
 					},
 					"12": {
 						"icon": "images/fontawesome/tractor.png",
