@@ -20,9 +20,9 @@
                         "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency Sheriff"
                     },
 					"3": {
-                        "icon": "images/fontawesome/shield.png",
-                        "text": "PD",
-                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
+                        "icon": "images/fontawesome/unlock.png",
+                        "write": "sherlock\n",
+                        "text": "Unlock"
                     },
 					"4": {
 						"icon": "images/fontawesome/angle-right.png",
@@ -65,9 +65,9 @@
 						"keys": "right"
 					},
 					"13": {
-                        "icon": "images/fontawesome/unlock.png",
-                        "write": "sherlock\n",
-                        "text": "Unlock"
+                        "icon": "images/fontawesome/shield.png",
+                        "text": "PD",
+                        "command": "./execute_command.sh /home/sherlock/.virtualenvs/streamdeck/bin/python3 /home/sherlock/workspace/streamdeck/send_sherlock_report.py send --to sherlocksales@thepolicedetector.com --sender rob@brooklynhacker.com --agency PD"
                     },
 					"14": {
 						"icon": "images/fontawesome/rectangle-x-mark.png",
@@ -80,19 +80,19 @@
 						"switch_page": 1
 					},
 					"1": {
-						"icon": "images/fontawesome/bullhorn.png",
-						"text": "Rap Horn",
-						"command": "paplay --device=1 sounds/airhorn.wav"
+						"icon": "images/fontawesome/face-sad-cry.png",
+						"text": "Noooo",
+						"command": "paplay --device=1 sounds/nooooo.wav"
 					},
 					"2": {
-						"icon": "images/fontawesome/robot.png",
-						"text": "Happy",
-						"command": "paplay --device=1 sounds/happy_r2d2.wav"
+						"icon": "images/fontawesome/spaghetti-monster-flying.png",
+						"text": "UFO",
+						"command": "paplay --device=1 sounds/x_files_theme_cut.wav"
 					},
 					"3": {
-						"icon": "images/fontawesome/robot.png",
-						"text": "Sad",
-						"command": "paplay --device=1 sounds/sad_r2d2.wav"
+						"icon": "images/fontawesome/not-equal.png",
+						"text": "Wrong",
+						"command": "paplay --device=1 sounds/wrong.wav"
 					},
 					"4": {
 						"icon": "images/fontawesome/angle-right.png",
@@ -124,9 +124,9 @@
 						"command": "paplay --device=1 sounds/yakety_sax.wav"
 					},
 					"10": {
-						"icon": "images/fontawesome/not-equal.png",
-						"text": "Wrong",
-						"command": "paplay --device=1 sounds/wrong.wav"
+						"icon": "images/fontawesome/robot.png",
+						"text": "Sad",
+						"command": "paplay --device=1 sounds/sad_r2d2.wav"
 					},
 					"11": {
 						"icon": "images/fontawesome/beer-mug-empty.png",
@@ -139,14 +139,14 @@
 						"command": "paplay --device=1 sounds/move.wav"
 					},
 					"13": {
-						"icon": "images/fontawesome/face-sad-cry.png",
-						"text": "Noooo",
-						"command": "paplay --device=1 sounds/nooooo.wav"
+						"icon": "images/fontawesome/bullhorn.png",
+						"text": "Rap Horn",
+						"command": "paplay --device=1 sounds/airhorn.wav"
 					},
 					"14": {
-						"icon": "images/fontawesome/spaghetti-monster-flying.png",
-						"text": "UFO",
-						"command": "paplay --device=1 sounds/x_files_theme_cut.wav"
+						"icon": "images/fontawesome/robot.png",
+						"text": "Happy",
+						"command": "paplay --device=1 sounds/happy_r2d2.wav"
 					}
 				},
 				"2": {
