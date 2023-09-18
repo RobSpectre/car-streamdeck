@@ -177,7 +177,7 @@ def get_address(current):
     address = None
 
     try:
-        geolocator = Photon(user_agent="Sherlock")
+        geolocator = Nominatim(user_agent="Sherlock")
         reverse = RateLimiter(geolocator.reverse, min_delay_seconds=1)
         address = reverse("{0}, {1}".format(current.lat,
                                             current.lon),
