@@ -59,7 +59,7 @@ time_pattern = r'time (\d{2}:\d{2}:\d{2}[apmAPM]{2})'
 date_pattern = r'date (\d{4}/\d{2}/\d{2})'
 
 now = datetime.now()
-now_string = now.strftime("%m %B %Y - %I:%M:%S%p")
+now_string = now.strftime("%d %B %Y - %I:%M:%S%p")
 
 
 @click.group()
