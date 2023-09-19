@@ -180,7 +180,11 @@
 						"command": "bash -c \"./execute_command.sh pkill -9 streamdeck && git pull && ~/.virtualenvs/streamdeck/bin/streamdeck\"",
 						"text": "Streamdeck"
 					},
-					"11": {},
+					"11": {
+                        "icon": "images/fontawesome/satellite.png",
+                        "command": "bash -c \" python get_gps_status.py | espeak\"",
+                        "text": "GPS"
+                    },
 					"12": {},
 					"13": {},
 					"14": {}
