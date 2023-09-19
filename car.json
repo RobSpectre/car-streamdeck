@@ -182,7 +182,7 @@
 					},
 					"11": {
                         "icon": "images/fontawesome/satellite.png",
-                        "command": "bash -c \" python get_gps_status.py | espeak\"",
+                        "command": "bash -c \" ../../.virtualenvs/streamdeck/bin/python3 get_gps_status.py | espeak\"",
                         "text": "GPS"
                     },
 					"12": {},
