@@ -1,4 +1,5 @@
 import re
+import os
 
 from datetime import datetime
 from datetime import timedelta
@@ -9,8 +10,7 @@ import click
 import gpsd
 import yagmail
 
-from geopy.geocoders import Nominatim
-from geopy.extra.rate_limiter import RateLimiter
+import geocoder
 
 labels = {
     'PD': {
@@ -61,6 +61,8 @@ date_pattern = r'date (\d{4}/\d{2}/\d{2})'
 now = datetime.now()
 now_string = now.strftime("%d %B %Y - %I:%M:%S%p")
 
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', None)
+
 
 @click.group()
 def cli():
@@ -89,6 +91,15 @@ def send(to, sender, agency):
         contents.append("AMIGO!")
         contents.append(f"Found a {labels[agency]['long_label']} unit - here is the info:")
         contents.append("<h1>Data Report</h1>")
+
+        map_image_uri = "https://maps.googleapis.com/maps/api/staticmap?center=" \
+                        f"{location['lat']},{location['lon']}" \
+                        "&zoom=14&size=400x400&markers=color:blue%7Clabel:P%7C" \
+                        f"{location['lat']},{location['lon']}" \
+                        f"&key={GOOGLE_API_KEY}"
+
+        contents.append(f"\n<img src=\"{map_image_uri}\"></img>\n")
+
         contents.append(f"""
                       Location: <a href="{location['map_url']}">Location</a>
                       Latitude: {location['lat']}
@@ -143,11 +154,10 @@ def get_location():
             'lon': current.lon,
             'speed': current.speed(),
             'altitude': current.alt,
-            'city': location.raw['address'].get('city', None),
-            'county': location.raw['address'].get('county', None),
-            'state': location.raw['address'].get('county', None),
-            'time': now_string,
-            'map_url': current.map_url
+            'city': location.city, 
+            'county': location.county,
+            'state': location.state,
+            'time': now_string
         }
     else:
         return None
@@ -177,11 +187,8 @@ def get_address(current):
     address = None
 
     try:
-        geolocator = Nominatim(user_agent="Sherlock")
-        reverse = RateLimiter(geolocator.reverse, min_delay_seconds=1)
-        address = reverse("{0}, {1}".format(current.lat,
-                                            current.lon),
-                          exactly_one=True)
+        address = geocoder.google([current.lat, current.lon],
+                                  method='reverse')
     except Exception as e:
         click.echo("Could not reverse address: {0}".format(e))
 
