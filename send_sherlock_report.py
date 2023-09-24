@@ -170,16 +170,19 @@ def get_gps_coordinates():
     except:
         click.echo("Could not connect to GPSD.")
 
-    try:
-        current = gpsd.get_current()
-        position = current.position()
-    except Exception as e:
-        click.echo("Unable to get location: {0}".format(e))
+    for i in range(5):
+        try:
+            current = gpsd.get_current()
+            position = current.position()
+        except Exception as e:
+            click.echo(f"Try {i} - Unable to get location: {e}")
+        finally:
+            if current and current.mode > 1:
+                click.echo("Fix acquired: {0}, {1}".format(current.lat, current.lon))
 
-    if current and current.mode > 1:
-        click.echo("Fix acquired: {0}, {1}".format(current.lat, current.lon))
-    else:
-        click.echo("Unable to acquire fix.")
+                return current
+            else:
+                click.echo("Unable to acquire fix.")
 
     return current
 
