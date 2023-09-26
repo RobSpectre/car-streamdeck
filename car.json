@@ -185,7 +185,11 @@
                         "command": "bash -c \" ../../.virtualenvs/streamdeck/bin/python3 get_gps_status.py | espeak\"",
                         "text": "GPS"
                     },
-					"12": {},
+					"12": {
+						"icon": "images/fontawesome/fingerprint.png",
+						"command": "bash -c \"./focus_window.sh Sherlock\"",
+						"text": "Sherlock"
+                    },
 					"13": {},
 					"14": {}
 				},

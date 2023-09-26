@@ -1,5 +1,6 @@
 import re
 import os
+import json
 
 from datetime import datetime
 from datetime import timedelta
@@ -136,6 +137,10 @@ def send(to, sender, agency):
     except Exception as e:
         click.echo(f"Error sending email: {e}")
 
+    click.echo("Writing data log...")
+
+    write_data_logs(agency, location, lines)
+
     click.echo("Done.")
 
 def get_location():
@@ -154,9 +159,9 @@ def get_location():
             'lon': current.lon,
             'speed': current.speed(),
             'altitude': current.alt,
-            'city': location.city, 
-            'county': location.county,
-            'state': location.state,
+            'city': address.city, 
+            'county': address.county,
+            'state': address.state,
             'time': now_string
         }
     else:
@@ -169,6 +174,7 @@ def get_gps_coordinates():
         gpsd.connect()
     except:
         click.echo("Could not connect to GPSD.")
+        return None
 
     for i in range(5):
         try:
@@ -177,14 +183,14 @@ def get_gps_coordinates():
         except Exception as e:
             click.echo(f"Try {i} - Unable to get location: {e}")
         finally:
-            if current and current.mode > 1:
+            if current.mode > 1:
                 click.echo("Fix acquired: {0}, {1}".format(current.lat, current.lon))
 
                 return current
             else:
                 click.echo("Unable to acquire fix.")
 
-    return current
+    return None 
 
 def get_address(current):
     address = None
@@ -217,6 +223,18 @@ def get_data_logs():
                 lines.append(line)
 
     return lines
+
+def write_data_logs(agency, location, lines):
+    with open("sherlock.jsonl", "a") as file:
+        for line in lines:
+            frame = {
+                'agency': agency,
+                'location': location,
+                'data': line
+            }
+
+            string = json.dumps(frame)
+            file.write(string + "\n")
 
 
 if __name__ == "__main__":
