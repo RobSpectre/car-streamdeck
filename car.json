@@ -190,7 +190,11 @@
 						"command": "bash -c \"./focus_window.sh Sherlock\"",
 						"text": "Sherlock"
                     },
-					"13": {},
+					"13": {
+						"icon": "images/fontawesome/gamepad.png",
+						"command": "bash -c \"./launch_retroarch.sh\"",
+						"text": "Games"
+                    },
 					"14": {}
 				},
 				"3": {
