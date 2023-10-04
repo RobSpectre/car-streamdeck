@@ -25,7 +25,7 @@ class App:
 
         self.interval = 1
         self.interval_counter = 0
-        self.interval_limit = 30
+        self.interval_limit = 300
 
         self.location = None
 
