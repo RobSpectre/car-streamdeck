@@ -1,7 +1,9 @@
 #!/usr/bin/python
 import time
+from datetime import datetime
 import logging
 import subprocess
+import json
 
 from daemon import DaemonContext
 
@@ -14,6 +16,7 @@ logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 fh = logging.FileHandler("./location.log")
 logger.addHandler(fh)
+
 
 class App:
     def __init__(self):
@@ -32,7 +35,13 @@ class App:
     def run(self):
         logging.info("Launching...")
         while True:
+            now = datetime.now()
+            now_string = now.strftime("%d %B %Y - %I:%M:%S%p")
+
             current = self.get_coordinates()
+
+            if current and current.mode > 1:
+                self.write_location(current, now_string)
 
             self.interval_counter += 1
 
@@ -80,7 +89,7 @@ class App:
 
         return None
 
-    def get_address(current):
+    def get_address(self, current):
         address = None
 
         try:
@@ -91,7 +100,7 @@ class App:
 
         return address
 
-    def write_state(location):
+    def write_state(self, location):
         logger.info("New state: updating Sherlock...")
 
         try:
@@ -100,11 +109,22 @@ class App:
         except Exception as e:
             logging.error(f"Could not open state file: {e}")
 
-    def refresh_sherlock():
+    def refresh_sherlock(self):
         logging.info("Refreshing Sherlock...")
 
         subprocess.check_call("./press_shortcut.sh F5 Sherlock",
                               shell=True)
+
+    def write_location(self, current, now_string):
+        with open("location.json", "w") as file:
+            coordinates = {
+                "time": now_string,
+                "lat": current.lat,
+                "lon": current.lon
+            }
+
+            string = json.dumps(coordinates)
+            file.write(string)
 
 
 if __name__ == "__main__":

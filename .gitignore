@@ -188,3 +188,4 @@ cython_debug/
 #.idea/
 
 *.jsonl
+location.json
