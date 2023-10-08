@@ -117,11 +117,7 @@ class App:
 
     def write_location(self, current, now_string):
         with open("location.json", "w") as file:
-            coordinates = {
-                "time": now_string,
-                "lat": current.lat,
-                "lon": current.lon
-            }
+            coordinates = { "time": now_string, "lat": current.lat, "lon": current.lon }
 
             string = json.dumps(coordinates)
             file.write(string)
