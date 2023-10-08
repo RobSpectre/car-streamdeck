@@ -183,7 +183,7 @@ def get_gps_coordinates():
         except Exception as e:
             click.echo(f"Try {i} - Unable to get location: {e}")
         finally:
-            if current.mode > 1:
+            if current and current.mode > 1:
                 click.echo("Fix acquired: {0}, {1}".format(current.lat, current.lon))
 
                 return current
