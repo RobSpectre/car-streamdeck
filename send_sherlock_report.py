@@ -199,6 +199,7 @@ def get_address(current):
         address = geocoder.google([current['lat'], current['lon']],
                                   method='reverse')
         click.echo(f"Address acquired: {address}")
+        click.echo("KEY: {0}".format(os.environ.get('GOOGLE_API_KEY', None)))
     except Exception as e:
         click.echo("Could not reverse address: {0}".format(e))
 
