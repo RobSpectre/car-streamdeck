@@ -2,10 +2,8 @@ from datetime import datetime
 
 import unittest
 from unittest.mock import patch
-from unittest.mock import mock_open 
-from unittest.mock import call 
-
-from io import StringIO
+from unittest.mock import mock_open
+from unittest.mock import call
 
 from send_sherlock_report import (
     get_location,
@@ -18,22 +16,30 @@ from send_sherlock_report import (
 now = datetime.now()
 now_string = now.strftime("time %I:%M:%S%p date %Y/%m/%d")
 
-class MockGPSCurrent:
-    def __init__(self):
-        self.lat = 12.345
-        self.lon = 67.890
-        self.alt = 100
-        self.mode = 2
+mock_gps_current = {
+    'mode': 2,
+    'lat': 12.345,
+    'lon': 67.890,
+    'speed': 50,
+    'track': 0,
+    'climb': 0,
+    'alt': 1000
+}
 
-    def speed(self):
-        return 50
+mock_gps_current_no_fix = {
+    'mode': 1
+}
 
-    def position(self):
-        return (self.lat, self.lon)
 
-class MockGPSCurrentNoFix:
-    def __init__(self):
-        self.mode = 1
+class MockRequest:
+    def json(self):
+        return mock_gps_current
+
+
+class MockRequestNoFix:
+    def json(self):
+        return mock_gps_current_no_fix
+
 
 class MockLocation:
     def __init__(self):
@@ -48,10 +54,9 @@ class TestSendSherlockReport(unittest.TestCase):
     def test_get_location_with_gps_data(self,
                                         mock_get_gps_coordinates,
                                         mock_get_address):
-        # Mock the get_gps_coordinates function to return dummy data
-        mock_get_gps_coordinates.return_value = MockGPSCurrent() 
-        mock_get_address.return_value = MockLocation() 
-        
+        mock_get_gps_coordinates.return_value = mock_gps_current
+        mock_get_address.return_value = MockLocation()
+
         location = get_location()
         self.assertIsNotNone(location)
         self.assertEqual(location['lat'], 12.345)
@@ -60,17 +65,16 @@ class TestSendSherlockReport(unittest.TestCase):
 
     @patch('send_sherlock_report.get_gps_coordinates')
     def test_get_location_without_gps_data(self, mock_get_gps_coordinates):
-        # Mock the get_gps_coordinates function to return None
         mock_get_gps_coordinates.return_value = None
-        
+
         location = get_location()
         self.assertIsNone(location)
 
-    @patch('send_sherlock_report.gpsd.connect')
-    def test_get_gps_coordinates_without_gpsd(self, mock_gpsd_connect):
+    @patch('requests.get')
+    def test_get_gps_coordinates_without_gpsd(self, mock_request):
         # Mock the get_gps_coordinates function to return None
-        mock_gpsd_connect.side_effect = Exception("Whoopsie!")
-        
+        mock_request.side_effect = Exception("Whoopsie!")
+
         location = get_gps_coordinates()
         self.assertIsNone(location)
 
@@ -79,38 +83,29 @@ class TestSendSherlockReport(unittest.TestCase):
     def test_get_location_without_address(self,
                                           mock_get_gps_coordinates,
                                           mock_get_address):
-        # Mock the get_gps_coordinates function to return None
-        mock_get_gps_coordinates.return_value = MockGPSCurrent() 
+        mock_get_gps_coordinates.return_value = mock_gps_current
         mock_get_address.return_value = None
-        
+
         location = get_location()
         self.assertIsNone(location)
 
-    @patch('send_sherlock_report.gpsd.connect')
-    def test_get_gps_coordinates_with_fix(self, mock_gpsd_connect):
+    @patch('requests.get')
+    def test_get_gps_coordinates_with_fix(self, mock_request):
         # Mock the gpsd.connect function to succeed
-        mock_gpsd_connect.return_value = True
-        
-        with patch('send_sherlock_report.gpsd.get_current') as mock_get_current:
-            # Mock the gpsd.get_current function to return dummy data
-            mock_get_current.return_value = MockGPSCurrent() 
-            
-            current = get_gps_coordinates()
-            self.assertIsNotNone(current)
-            self.assertEqual(current.lat, 12.345)
-            self.assertEqual(current.lon, 67.890)
+        mock_request.return_value = MockRequest()
 
-    @patch('send_sherlock_report.gpsd.connect')
-    def test_get_gps_coordinates_without_fix(self, mock_gpsd_connect):
+        current = get_gps_coordinates()
+        self.assertIsNotNone(current)
+        self.assertEqual(current['lat'], 12.345)
+        self.assertEqual(current['lon'], 67.890)
+
+    @patch('requests.get')
+    def test_get_gps_coordinates_without_fix(self, mock_request):
         # Mock the gpsd.connect function to succeed
-        mock_gpsd_connect.return_value = True
-        
-        with patch('send_sherlock_report.gpsd.get_current') as mock_get_current:
-            # Mock the gpsd.get_current function to return dummy data without a fix
-            mock_get_current.return_value = MockGPSCurrentNoFix()
+        mock_request.return_value = MockRequestNoFix()
 
-            current = get_gps_coordinates()
-            self.assertIsNone(current)
+        current = get_gps_coordinates()
+        self.assertIsNone(current)
 
     @patch('send_sherlock_report.geocoder.google')
     def test_get_address_with_data(self, mock_geocoder_google):
@@ -120,8 +115,8 @@ class TestSendSherlockReport(unittest.TestCase):
             'county': 'Sample County',
             'state': 'Sample State',
         }
-        
-        address = get_address(MockGPSCurrent())
+
+        address = get_address(mock_gps_current)
         self.assertIsNotNone(address)
         self.assertEqual(address['city'], 'Sample City')
         self.assertEqual(address['county'], 'Sample County')
@@ -131,8 +126,8 @@ class TestSendSherlockReport(unittest.TestCase):
     def test_get_address_without_data(self, mock_geocoder_google):
         # Mock the geocoder.google function to return None
         mock_geocoder_google.return_value = None
-        
-        address = get_address(MockGPSCurrentNoFix)
+
+        address = get_address(mock_gps_current_no_fix)
         self.assertIsNone(address)
 
     @patch('builtins.open', new_callable=unittest.mock.mock_open,

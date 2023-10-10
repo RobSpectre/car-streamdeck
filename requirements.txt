@@ -1,6 +1,9 @@
 streamdeck-linux-gui==3.0.1
 yagmail==0.15.293
 click==8.1.7
-gpsd-py3==0.3.0
 keyring==24.2.0
 geocoder==1.38.1
+gpsdclient==1.3.2
+fastapi==0.103.2
+uvicorn==0.23.2
+requests==2.31.0

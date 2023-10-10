@@ -177,7 +177,7 @@
 					"9": {},
 					"10": {
 						"icon": "images/fontawesome/arrows-rotate.png",
-						"command": "bash -c \"./execute_command.sh pkill -9 streamdeck && git pull && ~/.virtualenvs/streamdeck/bin/streamdeck\"",
+						"command": "bash -c \"./execute_command.sh pkill -9 streamdeck && git pull && pip install -r requirements.txt && cp car.json ../../.streamdeck_ui.json && ~/.virtualenvs/streamdeck/bin/streamdeck -n\"",
 						"text": "Streamdeck"
 					},
 					"11": {
@@ -187,7 +187,7 @@
                     },
 					"12": {
 						"icon": "images/fontawesome/fingerprint.png",
-						"command": "bash -c \"./focus_window.sh Sherlock\"",
+						"command": "bash -c \"./focus_window.sh Mozilla\"",
 						"text": "Sherlock"
                     },
 					"13": {

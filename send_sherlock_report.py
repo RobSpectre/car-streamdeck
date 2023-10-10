@@ -8,10 +8,11 @@ from datetime import timedelta
 from collections import deque
 
 import click
-import gpsd
 import yagmail
 
 import geocoder
+
+import requests
 
 labels = {
     'PD': {
@@ -69,6 +70,7 @@ GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', None)
 def cli():
     pass
 
+
 @cli.command(help="Send data report to Sherlock HQ.", name="send")
 @click.option("--to", required=True, type=str,
               help="Recipient of data report.")
@@ -86,8 +88,8 @@ def send(to, sender, agency):
 
     if location:
         subject = f"Sherlock data log for {labels[agency]['long_label']} in " \
-                   "{location[labels[agency]['location_key']]" \
-                   "at {now_string}"
+                  "{location[labels[agency]['location_key']]" \
+                  "at {now_string}"
 
         contents.append("AMIGO!")
         contents.append(f"Found a {labels[agency]['long_label']} unit - here is the info:")
@@ -121,14 +123,13 @@ def send(to, sender, agency):
     if len(lines) > 0:
         contents.append("<h2>Data Log:</h2>")
         contents.append("<pre><code>")
-        
+
         for line in lines:
             contents.append(line)
 
         contents.append("</code></pre>")
     else:
         contents.append("<pre>No data associated with this timestamp.</pre>")
-
 
     try:
         yag.send(to=to,
@@ -143,6 +144,7 @@ def send(to, sender, agency):
 
     click.echo("Done.")
 
+
 def get_location():
     click.echo("Getting location...")
 
@@ -155,11 +157,12 @@ def get_location():
 
     if address:
         return {
-            'lat': current.lat,
-            'lon': current.lon,
-            'speed': current.speed(),
-            'altitude': current.alt,
-            'city': address.city, 
+            'lat': current['lat'],
+            'lon': current['lon'],
+            'speed': current['speed'],
+            'altitude': current['alt'],
+            'track': current['track'],
+            'city': address.city,
             'county': address.county,
             'state': address.state,
             'time': now_string
@@ -167,41 +170,37 @@ def get_location():
     else:
         return None
 
+
 def get_gps_coordinates():
     current = None
 
     try:
-        gpsd.connect()
-    except:
-        click.echo("Could not connect to GPSD.")
-        return None
+        current = requests.get('http://localhost:8000/location').json()
+    except Exception as e:
+        click.echo(f"Unable to get location: {e}")
+    finally:
+        if current and current['mode'] > 1:
+            click.echo("Fix acquired: {0}, {1}".format(current['lat'],
+                                                       current['lon']))
 
-    for i in range(5):
-        try:
-            current = gpsd.get_current()
-            position = current.position()
-        except Exception as e:
-            click.echo(f"Try {i} - Unable to get location: {e}")
-        finally:
-            if current and current.mode > 1:
-                click.echo("Fix acquired: {0}, {1}".format(current.lat, current.lon))
+            return current
+        else:
+            click.echo("Unable to acquire fix.")
 
-                return current
-            else:
-                click.echo("Unable to acquire fix.")
+    return None
 
-    return None 
 
 def get_address(current):
     address = None
 
     try:
-        address = geocoder.google([current.lat, current.lon],
+        address = geocoder.google([current['lat'], current['lon']],
                                   method='reverse')
     except Exception as e:
         click.echo("Could not reverse address: {0}".format(e))
 
     return address
+
 
 def get_data_logs():
     lines = []
@@ -223,6 +222,7 @@ def get_data_logs():
                 lines.append(line)
 
     return lines
+
 
 def write_data_logs(agency, location, lines):
     with open("sherlock.jsonl", "a") as file:
