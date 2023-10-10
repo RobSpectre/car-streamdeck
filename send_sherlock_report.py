@@ -86,6 +86,8 @@ def send(to, sender, agency):
 
     location = get_location()
 
+    click.echo(f"Location: {location}")
+
     if location:
         subject = f"Sherlock data log for {labels[agency]['long_label']} in " \
                   "{location[labels[agency]['location_key']]" \
@@ -196,6 +198,7 @@ def get_address(current):
     try:
         address = geocoder.google([current['lat'], current['lon']],
                                   method='reverse')
+        click.echo(f"Address acquired: {address}")
     except Exception as e:
         click.echo("Could not reverse address: {0}".format(e))
 
