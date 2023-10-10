@@ -7,8 +7,8 @@ from pydantic import BaseModel
 
 class Location(BaseModel):
     mode: int
-    alt: Optional[int]
-    track: Optional[int]
+    alt: Optional[float]
+    track: Optional[float]
     speed: Optional[float]
     lat: Optional[float]
     lon: Optional[float]
