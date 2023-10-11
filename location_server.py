@@ -45,6 +45,11 @@ async def location():
     return app.current_location
 
 
+@app.get("/state")
+async def state():
+    return app.current_state
+
+
 @app.put("/location")
 async def create_location(location: Location):
     app.current_location = location
