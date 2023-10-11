@@ -67,7 +67,7 @@ def update_sherlock_state(location: Location):
     except Exception as e:
         logger.error(f"Could not reverse address: {e}")
 
-    if address and address.state is not app.current_state:
+    if address and (address.state is not app.current_state):
         try:
             with open('/var/www/html/ReadState.txt', 'w') as file:
                 file.write(address.state)
