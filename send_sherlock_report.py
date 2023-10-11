@@ -90,7 +90,7 @@ def send(to, sender, agency):
 
     if location:
         subject = f"Sherlock data log for {labels[agency]['long_label']} in " \
-                  f"{location[labels[agency]['location_key']]" \
+                  f"{location[labels[agency]['location_key']]}" \
                   f"at {now_string}"
 
         contents.append("AMIGO!")
