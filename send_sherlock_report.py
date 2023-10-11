@@ -106,7 +106,6 @@ def send(to, sender, agency):
         contents.append(f"\n<img src=\"{map_image_uri}\"></img>\n")
 
         contents.append(f"""
-                      Location: <a href="{location['map_url']}">Location</a>
                       Latitude: {location['lat']}
                       Longitude: {location['lon']}
                       Speed: {location['speed']}
