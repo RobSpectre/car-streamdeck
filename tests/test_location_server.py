@@ -81,13 +81,15 @@ class TestLocationServer(TestCase):
 
         mock_update.assert_called_once_with(self.location)
 
+    @patch('location_server.write_sherlock_state_and_refresh')
     @patch('location_server.geocoder.google')
-    def test_update_sherlock_state(self, mock_google):
+    def test_update_sherlock_state(self, mock_google, mock_refresh):
         mock_google.return_value = MockLocation()
 
         result = update_sherlock_state(self.location)
 
         self.assertEqual(result.state, 'NY')
+        assert not mock_refresh.called
 
     @patch('location_server.geocoder.google')
     def test_update_sherlock_state_google_error(self, mock_google):
@@ -125,6 +127,9 @@ class TestLocationServer(TestCase):
         mock_subprocess.assert_called_with(['./press_shortcut.sh',
                                            'F5',
                                            'Mozilla'])
+
+        response = self.client.get('/state').json()
+        self.assertEqual(response['current_state'], 'NY')
 
     @patch('subprocess.call')
     @patch('location_server.geocoder.google')

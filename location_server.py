@@ -20,6 +20,14 @@ class Location(BaseModel):
     lon: Optional[float] = None
 
 
+class State(BaseModel):
+    current_location: Optional[Location] = None
+    interval: int
+    interval_limit: int
+    counter: int
+    current_state: Optional[str] = None
+
+
 app = FastAPI()
 
 app.current_location = None
@@ -47,7 +55,13 @@ async def location():
 
 @app.get("/state")
 async def state():
-    return app.current_state
+    return State(
+        current_location=app.current_location,
+        interval=app.interval,
+        interval_limit=app.interval_limit,
+        counter=app.counter,
+        current_state=app.current_state
+    )
 
 
 @app.put("/location")
@@ -72,19 +86,26 @@ def update_sherlock_state(location: Location):
     except Exception as e:
         logger.error(f"Could not reverse address: {e}")
 
-    if address and (address.state is not app.current_state):
-        try:
-            with open('/var/www/html/ReadState.txt', 'w') as file:
-                file.write(address.state)
-            app.current_state = address.state
-        except Exception as e:
-            logger.error(f"Could not write to Sherlock state file: {e}")
-
-        try:
-            subprocess.call(["./press_shortcut.sh",
-                             "F5",
-                             "Mozilla"])
-        except Exception as e:
-            logger.error(f"Could not refresh Sherlock window: {e}")
+    if address and (address.state != app.current_state):
+        write_sherlock_state_and_refresh(address)
 
     return address
+
+
+def write_sherlock_state_and_refresh(address):
+    app.current_state = address.state
+
+    try:
+        with open('/var/www/html/ReadState.txt', 'w') as file:
+            file.write(address.state)
+    except Exception as e:
+        logger.error(f"Could not write to Sherlock state file: {e}")
+
+    try:
+        subprocess.call(["./press_shortcut.sh",
+                         "F5",
+                         "Mozilla"])
+    except Exception as e:
+        logger.error(f"Could not refresh Sherlock window: {e}")
+
+    return app.current_state

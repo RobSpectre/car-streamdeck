@@ -90,7 +90,7 @@ def send(to, sender, agency):
 
     if location:
         subject = f"Sherlock data log for {labels[agency]['long_label']} in " \
-                  f"{location[labels[agency]['location_key']]}" \
+                  f"{location[labels[agency]['location_key']]} " \
                   f"at {now_string}"
 
         contents.append("AMIGO!")
@@ -108,7 +108,9 @@ def send(to, sender, agency):
         contents.append(f"""
                       Latitude: {location['lat']}
                       Longitude: {location['lon']}
-                      Speed: {location['speed']}
+                      Speed: {location['speed']} mph
+                      Altitude: {location['alt']} ft
+                      Direction: {location['track']}° 
                       City: {location['city']}
                       County: {location['county']}
                       State: {location['state']}
@@ -160,8 +162,8 @@ def get_location():
         return {
             'lat': current['lat'],
             'lon': current['lon'],
-            'speed': current['speed'],
-            'altitude': current['alt'],
+            'speed': "{:.2f}".format(current['speed'] * 2.23694),
+            'alt': "{:.2f}".format(current['alt'] * 3.28084),
             'track': current['track'],
             'city': address.city,
             'county': address.county,

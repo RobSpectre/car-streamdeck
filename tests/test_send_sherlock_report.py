@@ -61,7 +61,7 @@ class TestSendSherlockReport(unittest.TestCase):
         self.assertIsNotNone(location)
         self.assertEqual(location['lat'], 12.345)
         self.assertEqual(location['lon'], 67.890)
-        self.assertEqual(location['speed'], 50)
+        self.assertEqual(location['speed'], '111.85')
 
     @patch('send_sherlock_report.get_gps_coordinates')
     def test_get_location_without_gps_data(self, mock_get_gps_coordinates):
