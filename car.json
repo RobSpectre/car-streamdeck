@@ -181,7 +181,7 @@
 					"9": {},
 					"10": {
 						"icon": "images/fontawesome/arrows-rotate.png",
-						"command": "bash -c \"./execute_command.sh pkill -9 streamdeck && git pull && pip install -r requirements.txt && cp car.json ../../.streamdeck_ui.json && ~/.virtualenvs/streamdeck/bin/streamdeck -n\"",
+						"command": "bash -c \"./execute_command.sh pkill -9 streamdeck && git pull && /home/sherlock/.virtualenvs/streamdeck/bin/pip install -r requirements.txt && cp car.json ../../.streamdeck_ui.json && ~/.virtualenvs/streamdeck/bin/streamdeck -n\"",
 						"text": "Streamdeck"
 					},
 					"11": {
