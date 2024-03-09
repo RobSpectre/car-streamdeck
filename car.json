@@ -80,14 +80,14 @@
 						"switch_page": 1
 					},
 					"1": {
-						"icon": "images/fontawesome/face-sad-cry.png",
-						"text": "Noooo",
-						"command": "paplay --device=1 sounds/nooooo.wav"
+						"icon": "images/fontawesome/music.png",
+						"text": "Eastbound",
+						"command": "paplay --device=1 sounds/smokey_theme.wav"
 					},
 					"2": {
-						"icon": "images/fontawesome/spaghetti-monster-flying.png",
-						"text": "UFO",
-						"command": "paplay --device=1 sounds/x_files_theme_cut.wav"
+						"icon": "images/fontawesome/piggy-bank.png",
+						"text": "BBQ",
+						"command": "paplay --device=1 sounds/smokey_barbecue_your_ass.wav"
 					},
 					"3": {
 						"icon": "images/fontawesome/not-equal.png",
@@ -144,9 +144,9 @@
 						"command": "paplay --device=1 sounds/airhorn.wav"
 					},
 					"14": {
-						"icon": "images/fontawesome/robot.png",
-						"text": "Happy",
-						"command": "paplay --device=1 sounds/happy_r2d2.wav"
+						"icon": "images/fontawesome/compass.png",
+						"text": "Where",
+						"command": "paplay --device=1 sounds/smokey_where.wav"
 					}
 				},
 				"2": {
