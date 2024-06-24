@@ -80,14 +80,14 @@
 						"switch_page": 1
 					},
 					"1": {
-						"icon": "images/fontawesome/music.png",
-						"text": "Eastbound",
-						"command": "paplay --device=1 sounds/smokey_theme.wav"
+						"icon": "images/fontawesome/face-kiss-wink-heart.png",
+						"text": "Calm Down",
+						"command": "paplay --device=1 sounds/everybody_calm_down.wav"
 					},
 					"2": {
-						"icon": "images/fontawesome/piggy-bank.png",
-						"text": "BBQ",
-						"command": "paplay --device=1 sounds/smokey_barbecue_your_ass.wav"
+						"icon": "images/fontawesome/thumbs-up.png",
+						"text": "Thank You",
+						"command": "paplay --device=1 sounds/thank_you.wav"
 					},
 					"3": {
 						"icon": "images/fontawesome/not-equal.png",
@@ -144,9 +144,9 @@
 						"command": "paplay --device=1 sounds/airhorn.wav"
 					},
 					"14": {
-						"icon": "images/fontawesome/compass.png",
-						"text": "Where",
-						"command": "paplay --device=1 sounds/smokey_where.wav"
+						"icon": "images/fontawesome/face-frown-open.png",
+						"text": "Oh No",
+						"command": "paplay --device=1 sounds/oh_no.wav"
 					}
 				},
 				"2": {
