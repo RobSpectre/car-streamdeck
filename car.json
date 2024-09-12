@@ -129,9 +129,9 @@
 						"command": "paplay --device=1 sounds/sad_r2d2.wav"
 					},
 					"11": {
-						"icon": "images/fontawesome/beer-mug-empty.png",
-						"text": "Cantina",
-						"command": "paplay --device=1 sounds/cantina.wav"
+						"icon": "images/fontawesome/car-side.png",
+						"text": "Cannonball",
+						"command": "paplay --device=1 sounds/cannonball.wav"
 					},
 					"12": {
 						"icon": "images/fontawesome/tractor.png",
